@@ -772,7 +772,7 @@ namespace _3sem_analisator
                             if (s[pos] == ';')
                             {
                                 states = States.F;
-                                pos++;
+                                pos++; 
                             }
                             else throw new ExceptionWithPosition("Ожидался символ ;", pos);
                         }
