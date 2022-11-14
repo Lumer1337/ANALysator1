@@ -48,13 +48,13 @@ namespace _3sem_analisator
             try
             {
                 string resultParse = SyntaxClassD.Run(s);
-              //  OutputTextBox.Text = "Идентификаторы" + Environment.NewLine + resultParse[0] + Environment.NewLine + "Константы" + Environment.NewLine + resultParse[1];
+              //OutputTextBox.Text = "Идентификаторы" + Environment.NewLine + resultParse[0] + Environment.NewLine + "Константы" + Environment.NewLine + resultParse[1];
             }
-            catch (ExceptionWithPosition err)
+            catch (ExceptionWithPosition error)
             {
-                errorBox.Text = err.Message;
+                errorBox.Text = error.Message;
                 textInput.Focus();
-                textInput.SelectionStart = err.Position;
+                textInput.SelectionStart = error.Position;
             }
             catch (Exception err)
             {
