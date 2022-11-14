@@ -81,7 +81,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидалось R", pos);
                         }
                         break;
-                    case States.A2:
+                    case States.A2:   //Проверка на пробел после VAR
                         {
                             if (s[pos] == ' ')
                             {
@@ -91,9 +91,15 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался пробел", pos);
                         }
                         break;
-                    case States.B:
+                    case States.B:    //Проверка на пробелы или начала "идентификатор переменной"
                         {
-                            if (s[pos] >= 'A' && s[pos] <= 'Z')
+                            if (s[pos] == ' ')   //Проверка на пробелы
+                            {
+                                states = States.B;
+                                pos++;
+                            }
+                            //Проверка на начало "идентификатор переменной"
+                            else if (s[pos] >= 'A' && s[pos] <= 'Z')   
                             {
                                 states = States.B5;
                                 pos++;
@@ -106,7 +112,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидались символы A...Z||_ ", pos);
                         }
                         break;
-                    case States.B5: 
+                    case States.B5: //Проверка "идентификатор переменной или пробел
                         {
                             if (s[pos] >= '0' && s[pos] <= '9')
                             {
@@ -123,7 +129,7 @@ namespace _3sem_analisator
                                 states = States.B5;
                                 pos++;
                             }
-                            else if (s[pos] == ' ')
+                            else if (s[pos] == ' ')  //Проверка на пробел после "идентификатор переменной"
                             {
                                 states = States.D;
                                 pos++;
@@ -131,16 +137,6 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидались символы 0...9||A...Z||_||пробел ", pos);
                         }
                         break;
-                    //case States.C:
-                    //    {
-                    //        if (s[pos] == ' ')
-                    //        {
-                    //            states = States.D;
-                    //            pos++;
-                    //        }
-                    //        else throw new ExceptionWithPosition("Ожидался пробел", pos);
-                    //    }
-                    //    break;
                     case States.D:
                         {
                             if (s[pos] == ' ')
