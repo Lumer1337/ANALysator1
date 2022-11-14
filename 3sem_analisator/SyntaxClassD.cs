@@ -433,7 +433,7 @@ namespace _3sem_analisator
                         }
                         break;
                     //REAL___________________________________________________________________________________________________________
-                    case States.E3:
+                    case States.E3:         //Проверка E (REAL)
                         {
                             if (s[pos] == 'E')
                             {
@@ -443,7 +443,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался E", pos);
                         }
                         break;
-                    case States.A3:
+                    case States.A3:         //Проверка A (REAL)
                         {
                             if (s[pos] == 'A')
                             {
@@ -453,7 +453,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался A", pos);
                         }
                         break;
-                    case States.L0:
+                    case States.L0:         //Проверка L (REAL)
                         {
                             if (s[pos] == 'L')
                             {
@@ -463,9 +463,8 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался L", pos);
                         }
                         break;
-
                     //BYTE___________________________________________________________________________________________________________
-                    case States.Y0:
+                    case States.Y0:         //Проверка Y (BYTE)
                         {
                             if (s[pos] == 'Y')
                             {
@@ -476,7 +475,7 @@ namespace _3sem_analisator
                         }
                         break;
 
-                    case States.T0:
+                    case States.T0:         //Проверка T (BYTE)
                         {
                             if (s[pos] == 'T')
                             {
@@ -487,7 +486,7 @@ namespace _3sem_analisator
                         }
                         break;
 
-                    case States.E0:
+                    case States.E0:         //Проверка E (BYTE)
                         {
                             if (s[pos] == 'E')
                             {
@@ -497,10 +496,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался E", pos);
                         }
                         break;
-
-
-                    //CHAR___________________________________________________________________________________________________________
-
+                    //CHAR_________________________________________________________________________________________________________________________________
                     case States.H0:
                         {
                             if (s[pos] == 'H')
