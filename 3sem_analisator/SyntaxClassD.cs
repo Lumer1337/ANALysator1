@@ -153,55 +153,55 @@ namespace _3sem_analisator
                         break;
                     case States.M:         //Проверка на пробелы или "описание файла"
                         {
-                            if (s[pos] == ' ')
+                            if (s[pos] == ' ')   //Проверка на пробелы
                             {
                                 states = States.M;
                                 pos++;
                             }
                             //TEXT
-                            else if (s[pos] == 'T')                                                                  
+                            else if (s[pos] == 'T')          //Проверка T (TEXT)                                                        
                             {
                                 states = States.N;
                                 pos++;
                             }
                             //FILE
-                            else if (s[pos] == 'F')
+                            else if (s[pos] == 'F')          //Проверка F (FILE)
                             {
                                 states = States.O;
                                 pos++;
                             }
                             //BYTE start
-                            else if (s[pos] == 'B')
+                            else if (s[pos] == 'B')          //Проверка B (BYTE)
                             {
                                 states = States.Y0;
                                 pos++;
                             }
                             //REAL start
-                            else if (s[pos] == 'R')
+                            else if (s[pos] == 'R')          //Проверка R (REAL)
                             {
                                 states = States.E3;
                                 pos++;
                             }
                             //CHAR start
-                            else if (s[pos] == 'C')
+                            else if (s[pos] == 'C')          //Проверка C (CHAR)
                             {
                                 states = States.H0;
                                 pos++;
                             }
                             //INTEGER start
-                            else if (s[pos] == 'I')
+                            else if (s[pos] == 'I')          //Проверка I (INTEGER)
                             {
                                 states = States.N0;
                                 pos++;
                             }
                             //DOUBLE start
-                            else if (s[pos] == 'D')
+                            else if (s[pos] == 'D')          //Проверка D (DOUBLE)
                             {
                                 states = States.O0;
                                 pos++;
                             }
                             //STRING || SINGLE start
-                            else if (s[pos] == 'S')
+                            else if (s[pos] == 'S')          //Проверка S (SINGLE ИЛИ STRING)
                             {
                                 states = States.S0;
                                 pos++;
