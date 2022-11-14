@@ -605,7 +605,7 @@ namespace _3sem_analisator
                         }
                         break;
                     //SINGLE___________________________________________________________________________________________________________
-                    case States.I1:
+                    case States.I1:         //Проверка N (SINGLE)
                         {
                             if (s[pos] == 'N')
                             {
@@ -615,7 +615,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался N", pos);
                         }
                         break;
-                    case States.N1:
+                    case States.N1:         //Проверка G (SINGLE)
                         {
                             if (s[pos] == 'G')
                             {
@@ -625,7 +625,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался G", pos);
                         }
                         break;
-                    case States.L2:
+                    case States.L2:         //Проверка L (SINGLE)
                         {
                             if (s[pos] == 'L')
                             {
@@ -635,7 +635,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался L", pos);
                         }
                         break;
-                    case States.E5:
+                    case States.E5:         //Проверка E (SINGLE)
                         {
                             if (s[pos] == 'E')
                             {
@@ -646,7 +646,7 @@ namespace _3sem_analisator
                         }
                         break;
                     //STRING [0...9]_______________________________________________________________________________________________________
-                    case States.T2:
+                    case States.T2:         //Проверка R (STRING)
                         {
                             if (s[pos] == 'R')
                             {
@@ -656,7 +656,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался R", pos);
                         }
                         break;
-                    case States.R3:
+                    case States.R3:         //Проверка I (STRING)
                         {
                             if (s[pos] == 'I')
                             {
@@ -666,7 +666,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался I", pos);
                         }
                         break;
-                    case States.I2:
+                    case States.I2:         //Проверка N (STRING)
                         {
                             if (s[pos] == 'N')
                             {
@@ -676,7 +676,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался N", pos);
                         }
                         break;
-                    case States.N2:
+                    case States.N2:         //Проверка G (STRING)
                         {
                             if (s[pos] == 'G')
                             {
