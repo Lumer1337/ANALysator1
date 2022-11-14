@@ -752,7 +752,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался символ 0...9||]", pos);
                         }
                         break;
-                    case States.X3:
+                    case States.X3:       //Проверка ] (STRING ["целая константа"]) или пробелы
                         {
                             if (s[pos] == ' ')
                             {
@@ -767,9 +767,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался ]||пробел", pos);
                         }
                         break;
-
-                    //состояние Q
-                    case States.Q:
+                    case States.Q:       //Проверка точки с запятой
                         {
                             if (s[pos] == ';')
                             {
