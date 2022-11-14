@@ -108,21 +108,21 @@
             this.примерToolStripMenuItem.Name = "примерToolStripMenuItem";
             this.примерToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
             this.примерToolStripMenuItem.Text = "Пример1";
-            this.примерToolStripMenuItem.Click += new System.EventHandler(this.примерToolStripMenuItem_Click);
+            this.примерToolStripMenuItem.Click += new System.EventHandler(this.Example1ToolStripMenuItem_Click);
             // 
             // примерToolStripMenuItem1
             // 
             this.примерToolStripMenuItem1.Name = "примерToolStripMenuItem1";
             this.примерToolStripMenuItem1.Size = new System.Drawing.Size(224, 34);
             this.примерToolStripMenuItem1.Text = "Пример2";
-            this.примерToolStripMenuItem1.Click += new System.EventHandler(this.примерToolStripMenuItem1_Click);
+            this.примерToolStripMenuItem1.Click += new System.EventHandler(this.Example2ToolStripMenuItem_Click);
             // 
             // пример3ToolStripMenuItem
             // 
             this.пример3ToolStripMenuItem.Name = "пример3ToolStripMenuItem";
             this.пример3ToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
             this.пример3ToolStripMenuItem.Text = "Пример3";
-            this.пример3ToolStripMenuItem.Click += new System.EventHandler(this.пример3ToolStripMenuItem_Click);
+            this.пример3ToolStripMenuItem.Click += new System.EventHandler(this.Example3ToolStripMenuItem_Click);
             // 
             // insert_tool_strip_but
             // 
@@ -172,14 +172,14 @@
             this.пример4ToolStripMenuItem.Name = "пример4ToolStripMenuItem";
             this.пример4ToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
             this.пример4ToolStripMenuItem.Text = "Пример4";
-            this.пример4ToolStripMenuItem.Click += new System.EventHandler(this.пример4ToolStripMenuItem_Click);
+            this.пример4ToolStripMenuItem.Click += new System.EventHandler(this.Example4ToolStripMenuItem_Click);
             // 
             // пример5ToolStripMenuItem
             // 
             this.пример5ToolStripMenuItem.Name = "пример5ToolStripMenuItem";
             this.пример5ToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
             this.пример5ToolStripMenuItem.Text = "Пример5";
-            this.пример5ToolStripMenuItem.Click += new System.EventHandler(this.пример5ToolStripMenuItem_Click);
+            this.пример5ToolStripMenuItem.Click += new System.EventHandler(this.Example5ToolStripMenuItem_Click);
             // 
             // Form1
             // 

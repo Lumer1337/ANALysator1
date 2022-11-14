@@ -30,7 +30,7 @@ namespace _3sem_analisator
             E3,A3,L0,
             O0,U0,B1,L1,E4,
             S0,I1,N1,L2,E5,
-            T2,R3,I2,N2,G2, Z, X, X1, X2, X3
+            T2,R3,I2,N2,G2,Z,X,X1,X2,X3
 
         }
 
