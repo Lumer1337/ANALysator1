@@ -324,7 +324,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался пробел||A...Z||_", pos);
                         }
                         break;
-                    case States.O7:
+                    case States.O7://Проверка "идентификатор переменной"
                         {
                             if (s[pos] >= '0' && s[pos] <= '9')
                             {
