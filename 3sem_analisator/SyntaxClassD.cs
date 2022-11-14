@@ -61,9 +61,9 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидались пробел или A", pos);
                         }
                         break;
-                    case States.A:
+                    case States.A:       //Проверка A (VAR)
                         {
-                            if (s[pos] == 'A')  //Проверка A (VAR)
+                            if (s[pos] == 'A')
                             {
                                 states = States.A1;
                                 pos++;
