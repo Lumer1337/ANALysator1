@@ -35,7 +35,7 @@ namespace _3sem_analisator
         }
 
         // Текущее состояние автомата
-        // private States states;
+
 
         public static string Run(string s)
         {
@@ -46,14 +46,14 @@ namespace _3sem_analisator
             {
                 switch (states)
                 {
-                    case States.S:
+                    case States.S:           //Проверка на пробелы или V (VAR)
                         {
-                            if (s[pos] == ' ')
+                            if (s[pos] == ' ')  //Проверка на пробелы
                             {
                                 states = States.S;
                                 pos++;
                             }
-                            else if (s[pos] == 'V')
+                            else if (s[pos] == 'V')   //Проверка на V (VAR)
                             {
                                 states = States.A;
                                 pos++;
@@ -63,7 +63,7 @@ namespace _3sem_analisator
                         break;
                     case States.A:
                         {
-                            if (s[pos] == 'A')
+                            if (s[pos] == 'A')  //Проверка A (VAR)
                             {
                                 states = States.A1;
                                 pos++;
@@ -71,7 +71,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидалось A", pos);
                         }
                         break;
-                    case States.A1:
+                    case States.A1:   //Проверка R (VAR)
                         {
                             if (s[pos] == 'R')
                             {
