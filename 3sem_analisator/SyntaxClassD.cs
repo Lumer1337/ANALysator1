@@ -21,7 +21,7 @@ namespace _3sem_analisator
             L,
             M,
             N,N3,N4,//TEXT
-            O,O1,O2,O3,O4,O5,O6,O7,  //FILE
+            O,O1,O2,O3,O4,O5,O6,O7,//FILE
             Q,
             F,
             Y0,T0,E0,
