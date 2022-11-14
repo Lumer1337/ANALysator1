@@ -719,17 +719,22 @@ namespace _3sem_analisator
                                 states = States.X1;
                                 pos++;
                             }
-                            else throw new ExceptionWithPosition("Ожидался [", pos);
+                            else throw new ExceptionWithPosition("Ожидался [||пробел||;", pos);
                         }
                         break;
                     case States.X1:
                         {
-                            if (s[pos] >= '1' && s[pos] <= '9')
+                            if (s[pos] == ' ')
+                            {
+                                states = States.X1;
+                                pos++;
+                            }
+                            else if (s[pos] >= '1' && s[pos] <= '9')
                             {
                                 states = States.X2;
                                 pos++;
                             }
-                            else throw new ExceptionWithPosition("Ожидался символ 1...9", pos);
+                            else throw new ExceptionWithPosition("Ожидался символ 1...9||пробел", pos);
                         }
                         break;
                     case States.X2:
