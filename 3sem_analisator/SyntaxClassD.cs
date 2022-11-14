@@ -687,9 +687,9 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался G", pos);
                         }
                         break;
-                    case States.Z:
+                    case States.Z:         //Проверка [ (STRING ["целая константа"]) ИЛИ просто STRING 
                         {
-                            if (s[pos] == '[') 
+                            if (s[pos] == '[') //Проверка [ (STRING ["целая константа"])
                             {
                                 states = States.X1;
                                 pos++;
@@ -702,7 +702,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался пробел", pos);
                         }
                         break;
-                    case States.X:
+                    case States.X:         //Проверка [ (STRING ["целая константа"]) ИЛИ просто STRING
                         {
                             if (s[pos] == ' ')
                             {
@@ -722,7 +722,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался [||пробел||;", pos);
                         }
                         break;
-                    case States.X1:
+                    case States.X1:        //Проверка начала "целая константа" (STRING ["целая константа"])
                         {
                             if (s[pos] == ' ')
                             {
@@ -737,7 +737,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался символ 1...9||пробел", pos);
                         }
                         break;
-                    case States.X2:
+                    case States.X2:        //Проверка "целая константа" (STRING ["целая константа"])
                         {
                             if (s[pos] >= '0' && s[pos] <= '9')
                             {
@@ -764,6 +764,7 @@ namespace _3sem_analisator
                                 states = States.Q;
                                 pos++;
                             }
+                            else throw new ExceptionWithPosition("Ожидался ]||пробел", pos);
                         }
                         break;
 
