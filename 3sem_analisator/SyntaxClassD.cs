@@ -777,7 +777,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался символ ;", pos);
                         }
                         break;
-                    case States.F:
+                    case States.F:      //Проверка пробела или "идентификатор переменной"
                         {
                             if (s[pos] == ' ')
                             {
@@ -797,10 +797,9 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался символ ;||A...Z||_", pos);
                         }
                         break;
-
                 }
             }
-            if (states != States.F)
+            if (states != States.F)      //Проверка неверной строки
             {
                 throw new ExceptionWithPosition("Неверная цепочка", pos);
             }
