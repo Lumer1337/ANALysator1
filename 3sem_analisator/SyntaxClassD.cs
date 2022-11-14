@@ -20,7 +20,7 @@ namespace _3sem_analisator
             D,
             M,
             N,N3,N4,//TEXT
-            O,O1,O2,O3,O4,O5,O6,O7,//FILE
+            O,O1,O2,O3,O4,O5,O6,O7,O8,//FILE
             Q,
             F,
             Y0,T0,E0,
@@ -158,49 +158,41 @@ namespace _3sem_analisator
                                 states = States.M;
                                 pos++;
                             }
-                            //TEXT
                             else if (s[pos] == 'T')          //Проверка T (TEXT)                                                        
                             {
                                 states = States.N;
                                 pos++;
                             }
-                            //FILE
                             else if (s[pos] == 'F')          //Проверка F (FILE)
                             {
                                 states = States.O;
                                 pos++;
                             }
-                            //BYTE start
                             else if (s[pos] == 'B')          //Проверка B (BYTE)
                             {
                                 states = States.Y0;
                                 pos++;
                             }
-                            //REAL start
                             else if (s[pos] == 'R')          //Проверка R (REAL)
                             {
                                 states = States.E3;
                                 pos++;
                             }
-                            //CHAR start
                             else if (s[pos] == 'C')          //Проверка C (CHAR)
                             {
                                 states = States.H0;
                                 pos++;
                             }
-                            //INTEGER start
                             else if (s[pos] == 'I')          //Проверка I (INTEGER)
                             {
                                 states = States.N0;
                                 pos++;
                             }
-                            //DOUBLE start
                             else if (s[pos] == 'D')          //Проверка D (DOUBLE)
                             {
                                 states = States.O0;
                                 pos++;
                             }
-                            //STRING || SINGLE start
                             else if (s[pos] == 'S')          //Проверка S (SINGLE ИЛИ STRING)
                             {
                                 states = States.S0;
@@ -210,9 +202,9 @@ namespace _3sem_analisator
                         }
                         break;
                     //FILE___________________________________________________________________________________________________________
-                    case States.O:
+                    case States.O:          //Проверка I (FILE)
                         {
-                            if (s[pos] == 'I')
+                            if (s[pos] == 'I')  
                             {
                                 states = States.O1;
                                 pos++;
@@ -220,7 +212,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался I", pos);
                         }
                         break;
-                    case States.O1:
+                    case States.O1:          //Проверка L (FILE)
                         {
                             if (s[pos] == 'L')
                             {
@@ -230,7 +222,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался L", pos);
                         }
                         break;
-                    case States.O2:
+                    case States.O2:          //Проверка E (FILE)
                         {
                             if (s[pos] == 'E')
                             {
@@ -240,7 +232,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался E", pos);
                         }
                         break;
-                    case States.O3:
+                    case States.O3:          //Проверка пробела после FILE, перед OF/////////////////////////////////////////////////////////////????????
                         {
                             if (s[pos] == ' ')
                             {
@@ -250,7 +242,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался пробел", pos);
                         }
                         break;
-                    case States.O4:
+                    case States.O4:          //Проверка O (FILE OF)
                         {
                             if (s[pos] == 'O')
                             {
@@ -260,20 +252,29 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался O", pos);
                         }
                         break;
-                    case States.O5:
+                    case States.O5:          //Проверка F (FILE OF)
                         {
                             if (s[pos] == 'F')
                             {
-                                states = States.O6;
+                                states = States.O8;
                                 pos++;
                             }
                             else throw new ExceptionWithPosition("Ожидался F", pos);
                         }
                         break;
-                        //probel
-                    case States.O6:
+                    case States.O8:       //Проверка на пробел после FILE OF
                         {
                             if (s[pos] == ' ')
+                            {
+                                states = States.O6;
+                                pos++;
+                            }
+                            else throw new ExceptionWithPosition("Ожидался пробел", pos);
+                        }
+                        break;
+                    case States.O6:      //Проверка на пробелы или "тип" или "идентификатор"
+                        {
+                            if (s[pos] == ' ')   //Проверка на пробелы
                             {
                                 states = States.O6;
                                 pos++;
