@@ -18,7 +18,6 @@ namespace _3sem_analisator
             A, A1, A2, 
             B,B5,
             D,
-            L,
             M,
             N,N3,N4,//TEXT
             O,O1,O2,O3,O4,O5,O6,O7,//FILE
@@ -112,7 +111,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидались символы A...Z||_ ", pos);
                         }
                         break;
-                    case States.B5: //Проверка "идентификатор переменной или пробел
+                    case States.B5: //Проверка "идентификатор переменной" или пробел
                         {
                             if (s[pos] >= '0' && s[pos] <= '9')
                             {
@@ -137,32 +136,22 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидались символы 0...9||A...Z||_||пробел ", pos);
                         }
                         break;
-                    case States.D:
+                    case States.D: //Проверка на пробелы или двоеточие
                         {
-                            if (s[pos] == ' ')
+                            if (s[pos] == ' ')   //Проверка на пробелы
                             {
                                 states = States.D;
                                 pos++;
                             }
-                            else if (s[pos] == ':')
+                            else if (s[pos] == ':')  //Проверка на двоеточие
                             {
-                                states = States.L;
+                                states = States.M;
                                 pos++;
                             }
                             else throw new ExceptionWithPosition("Ожидались пробел или :", pos);
                         }
                         break;
-                    case States.L:
-                        {
-                            if (s[pos] == ' ')
-                            {
-                                states = States.M;
-                                pos++;
-                            }
-                            else throw new ExceptionWithPosition("Ожидался пробел", pos);
-                        }
-                        break;
-                    case States.M:
+                    case States.M:         //Проверка на пробелы или "описание файла"
                         {
                             if (s[pos] == ' ')
                             {
