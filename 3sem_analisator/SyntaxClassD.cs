@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.AxHost;
@@ -688,7 +689,12 @@ namespace _3sem_analisator
                         break;
                     case States.Z:
                         {
-                            if (s[pos] == ' ')
+                            if (s[pos] == '[') 
+                            {
+                                states = States.X1;
+                                pos++;
+                            }
+                            else if (s[pos] == ' ')
                             {
                                 states = States.X;
                                 pos++;
@@ -698,7 +704,17 @@ namespace _3sem_analisator
                         break;
                     case States.X:
                         {
-                            if (s[pos] == '[')
+                            if (s[pos] == ' ')
+                            {
+                                states = States.X;
+                                pos++;
+                            }
+                            else if (s[pos] == ';')
+                            {
+                                states = States.F;
+                                pos++;
+                            }
+                            else if (s[pos] == '[')
                             {
                                 states = States.X1;
                                 pos++;
