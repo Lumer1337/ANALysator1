@@ -686,16 +686,6 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался G", pos);
                         }
                         break;
-                    //case States.G2:
-                    //    {
-                    //        if (s[pos] == 'G')
-                    //        {
-                    //            states = States.Z;
-                    //            pos++;
-                    //        }
-                    //        else throw new ExceptionWithPosition("Ожидался G", pos);
-                    //    }
-                    //    break;
                     case States.Z:
                         {
                             if (s[pos] == ' ')
