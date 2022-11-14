@@ -589,14 +589,14 @@ namespace _3sem_analisator
                         }
                         break;
                     //SINGLE OR STRING___________________________________________________________________________________________________________
-                    case States.S0:
+                    case States.S0:         //Проверка T (STRING) ИЛИ I (SINGLE)
                         {
-                            if (s[pos] == 'T')
+                            if (s[pos] == 'T') //Проверка T (STRING)
                             {
                                 states = States.T2;
                                 pos++;
                             }
-                            else if (s[pos] == 'I')
+                            else if (s[pos] == 'I')   //Проверка I (SINGLE)
                             {
                                 states = States.I1;
                                 pos++;
