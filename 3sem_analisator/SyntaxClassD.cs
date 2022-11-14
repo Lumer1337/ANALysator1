@@ -30,7 +30,7 @@ namespace _3sem_analisator
             E3,A3,L0,
             O0,U0,B1,L1,E4,
             S0,I1,N1,L2,E5,
-            T2,R3,I2,N2,G2, Z, X, X1, X2
+            T2,R3,I2,N2,G2, Z, X, X1, X2, X3
 
         }
 
@@ -744,12 +744,26 @@ namespace _3sem_analisator
                                 states = States.X2;
                                 pos++;
                             }
+                            else if (s[pos] == ' ')
+                            {
+                                states = States.X3;
+                                pos++;
+                            }
+                            else throw new ExceptionWithPosition("Ожидался символ 0...9||]", pos);
+                        }
+                        break;
+                    case States.X3:
+                        {
+                            if (s[pos] == ' ')
+                            {
+                                states = States.X3;
+                                pos++;
+                            }
                             else if (s[pos] == ']')
                             {
                                 states = States.Q;
                                 pos++;
                             }
-                            else throw new ExceptionWithPosition("Ожидался символ 0...9||]", pos);
                         }
                         break;
 
