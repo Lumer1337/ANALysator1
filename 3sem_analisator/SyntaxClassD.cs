@@ -497,7 +497,7 @@ namespace _3sem_analisator
                         }
                         break;
                     //CHAR_________________________________________________________________________________________________________________________________
-                    case States.H0:
+                    case States.H0:         //Проверка H (CHAR)
                         {
                             if (s[pos] == 'H')
                             {
@@ -507,7 +507,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался H", pos);
                         }
                         break;
-                    case States.A0:
+                    case States.A0:         //Проверка A (CHAR)
                         {
                             if (s[pos] == 'A')
                             {
@@ -517,7 +517,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался A", pos);
                         }
                         break;
-                    case States.R0:
+                    case States.R0:         //Проверка R (CHAR)
                         {
                             if (s[pos] == 'R')
                             {
@@ -527,10 +527,8 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался R", pos);
                         }
                         break;
-
-
                     //INTEGER___________________________________________________________________________________________________________
-                    case States.N0:
+                    case States.N0:         //Проверка N (INTEGER)
                         {
                             if (s[pos] == 'N')
                             {
@@ -540,8 +538,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался N", pos);
                         }
                         break;
-
-                    case States.T1:
+                    case States.T1:         //Проверка T (INTEGER)
                         {
                             if (s[pos] == 'T')
                             {
@@ -551,8 +548,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался T", pos);
                         }
                         break;
-
-                    case States.E1:
+                    case States.E1:         //Проверка E (INTEGER)
                         {
                             if (s[pos] == 'E')
                             {
@@ -562,8 +558,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался E", pos);
                         }
                         break;
-
-                    case States.G0:
+                    case States.G0:         //Проверка G (INTEGER)
                         {
                             if (s[pos] == 'G')
                             {
@@ -573,8 +568,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался G", pos);
                         }
                         break;
-
-                    case States.E2:
+                    case States.E2:         //Проверка E (INTEGER)
                         {
                             if (s[pos] == 'E')
                             {
@@ -584,8 +578,7 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался E", pos);
                         }
                         break;
-
-                    case States.R1:
+                    case States.R1:         //Проверка R (INTEGER)
                         {
                             if (s[pos] == 'R')
                             {
@@ -595,7 +588,6 @@ namespace _3sem_analisator
                             else throw new ExceptionWithPosition("Ожидался R", pos);
                         }
                         break;
-
                     //SINGLE OR STRING___________________________________________________________________________________________________________
                     case States.S0:
                         {
