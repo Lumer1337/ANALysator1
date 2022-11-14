@@ -279,45 +279,38 @@ namespace _3sem_analisator
                                 states = States.O6;
                                 pos++;
                             }
-                            
-                            //тип
-                            //BYTE start
-                            else if (s[pos] == 'B')
+                            //Проверка "тип"
+                            else if (s[pos] == 'B')   //Проверка B (BYTE)
                             {
                                 states = States.Y0;
                                 pos++;
                             }
-                            //Real start
-                            else if (s[pos] == 'R')
+                            else if (s[pos] == 'R')   //Проверка R (REAL)
                             {
                                 states = States.E3;
                                 pos++;
                             }
-                            //CHAR start
-                            else if (s[pos] == 'C')
+                            else if (s[pos] == 'C')   //Проверка C (CHAR)
                             {
                                 states = States.H0;
                                 pos++;
                             }
-                            //INTEGER start
-                            else if (s[pos] == 'I')
+                            else if (s[pos] == 'I')   //Проверка I (INTEGER)
                             {
                                 states = States.N0;
                                 pos++;
                             }
-                            //DOUBLE start
-                            else if (s[pos] == 'D')
+                            else if (s[pos] == 'D')   //Проверка D (DOUBLE)
                             {
                                 states = States.O0;
                                 pos++;
                             }
-                            //STRING || SINGLE start
-                            else if (s[pos] == 'S')
+                            else if (s[pos] == 'S')   //Проверка S (SINGLE ИЛИ STRING)
                             {
                                 states = States.S0;
                                 pos++;
                             }
-                            //идентификатор переменной
+                            //Проверка начала "идентификатор переменной"
                             else if (s[pos] >= 'A' && s[pos] <= 'Z')
                             {
                                 states = States.O7;
