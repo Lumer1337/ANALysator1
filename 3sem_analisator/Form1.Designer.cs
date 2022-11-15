@@ -37,32 +37,32 @@
             this.примерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.примерToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.пример3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пример4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пример5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insert_tool_strip_but = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.errorLab = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.пример4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.пример5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textInput
             // 
             this.textInput.Font = new System.Drawing.Font("Microsoft Tai Le", 14F);
-            this.textInput.Location = new System.Drawing.Point(285, 97);
+            this.textInput.Location = new System.Drawing.Point(18, 105);
             this.textInput.Margin = new System.Windows.Forms.Padding(2);
             this.textInput.MaximumSize = new System.Drawing.Size(3751, 150);
             this.textInput.MinimumSize = new System.Drawing.Size(338, 4);
             this.textInput.Name = "textInput";
-            this.textInput.Size = new System.Drawing.Size(590, 37);
+            this.textInput.Size = new System.Drawing.Size(590, 31);
             this.textInput.TabIndex = 4;
             // 
             // error
             // 
-            this.error.Location = new System.Drawing.Point(432, 249);
+            this.error.Location = new System.Drawing.Point(520, 254);
             this.error.Margin = new System.Windows.Forms.Padding(2);
             this.error.Name = "error";
-            this.error.Size = new System.Drawing.Size(538, 187);
+            this.error.Size = new System.Drawing.Size(412, 187);
             this.error.TabIndex = 5;
             this.error.Text = "";
             // 
@@ -79,10 +79,10 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 97);
+            this.label1.Location = new System.Drawing.Point(13, 64);
             this.label1.MaximumSize = new System.Drawing.Size(500, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(472, 41);
+            this.label1.Size = new System.Drawing.Size(471, 29);
             this.label1.TabIndex = 10;
             this.label1.Text = "Входная строка:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -100,29 +100,43 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(125, 33);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(99, 28);
             this.toolStripDropDownButton1.Text = "Пример";
             // 
             // примерToolStripMenuItem
             // 
             this.примерToolStripMenuItem.Name = "примерToolStripMenuItem";
-            this.примерToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.примерToolStripMenuItem.Size = new System.Drawing.Size(167, 28);
             this.примерToolStripMenuItem.Text = "Пример1";
             this.примерToolStripMenuItem.Click += new System.EventHandler(this.Example1ToolStripMenuItem_Click);
             // 
             // примерToolStripMenuItem1
             // 
             this.примерToolStripMenuItem1.Name = "примерToolStripMenuItem1";
-            this.примерToolStripMenuItem1.Size = new System.Drawing.Size(224, 34);
+            this.примерToolStripMenuItem1.Size = new System.Drawing.Size(167, 28);
             this.примерToolStripMenuItem1.Text = "Пример2";
             this.примерToolStripMenuItem1.Click += new System.EventHandler(this.Example2ToolStripMenuItem_Click);
             // 
             // пример3ToolStripMenuItem
             // 
             this.пример3ToolStripMenuItem.Name = "пример3ToolStripMenuItem";
-            this.пример3ToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.пример3ToolStripMenuItem.Size = new System.Drawing.Size(167, 28);
             this.пример3ToolStripMenuItem.Text = "Пример3";
             this.пример3ToolStripMenuItem.Click += new System.EventHandler(this.Example3ToolStripMenuItem_Click);
+            // 
+            // пример4ToolStripMenuItem
+            // 
+            this.пример4ToolStripMenuItem.Name = "пример4ToolStripMenuItem";
+            this.пример4ToolStripMenuItem.Size = new System.Drawing.Size(167, 28);
+            this.пример4ToolStripMenuItem.Text = "Пример4";
+            this.пример4ToolStripMenuItem.Click += new System.EventHandler(this.Example4ToolStripMenuItem_Click);
+            // 
+            // пример5ToolStripMenuItem
+            // 
+            this.пример5ToolStripMenuItem.Name = "пример5ToolStripMenuItem";
+            this.пример5ToolStripMenuItem.Size = new System.Drawing.Size(167, 28);
+            this.пример5ToolStripMenuItem.Text = "Пример5";
+            this.пример5ToolStripMenuItem.Click += new System.EventHandler(this.Example5ToolStripMenuItem_Click);
             // 
             // insert_tool_strip_but
             // 
@@ -131,7 +145,7 @@
             this.insert_tool_strip_but.Image = ((System.Drawing.Image)(resources.GetObject("insert_tool_strip_but.Image")));
             this.insert_tool_strip_but.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.insert_tool_strip_but.Name = "insert_tool_strip_but";
-            this.insert_tool_strip_but.Size = new System.Drawing.Size(210, 33);
+            this.insert_tool_strip_but.Size = new System.Drawing.Size(167, 28);
             this.insert_tool_strip_but.Text = "Анализировать";
             this.insert_tool_strip_but.Click += new System.EventHandler(this.insert_tool_strip_but_Click);
             // 
@@ -143,14 +157,14 @@
             this.insert_tool_strip_but});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1054, 36);
+            this.toolStrip1.Size = new System.Drawing.Size(1054, 31);
             this.toolStrip1.TabIndex = 9;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // errorLab
             // 
             this.errorLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.errorLab.Location = new System.Drawing.Point(12, 206);
+            this.errorLab.Location = new System.Drawing.Point(13, 206);
             this.errorLab.MaximumSize = new System.Drawing.Size(500, 90);
             this.errorLab.Name = "errorLab";
             this.errorLab.Size = new System.Drawing.Size(472, 41);
@@ -160,26 +174,12 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(426, 206);
+            this.label2.Location = new System.Drawing.Point(515, 206);
             this.label2.MaximumSize = new System.Drawing.Size(700, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(600, 90);
             this.label2.TabIndex = 12;
             this.label2.Text = "Список констант и идентификаторов:";
-            // 
-            // пример4ToolStripMenuItem
-            // 
-            this.пример4ToolStripMenuItem.Name = "пример4ToolStripMenuItem";
-            this.пример4ToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
-            this.пример4ToolStripMenuItem.Text = "Пример4";
-            this.пример4ToolStripMenuItem.Click += new System.EventHandler(this.Example4ToolStripMenuItem_Click);
-            // 
-            // пример5ToolStripMenuItem
-            // 
-            this.пример5ToolStripMenuItem.Name = "пример5ToolStripMenuItem";
-            this.пример5ToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
-            this.пример5ToolStripMenuItem.Text = "Пример5";
-            this.пример5ToolStripMenuItem.Click += new System.EventHandler(this.Example5ToolStripMenuItem_Click);
             // 
             // Form1
             // 
