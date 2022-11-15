@@ -85,7 +85,6 @@
             this.label1.Size = new System.Drawing.Size(471, 29);
             this.label1.TabIndex = 10;
             this.label1.Text = "Входная строка:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // toolStripDropDownButton1
             // 

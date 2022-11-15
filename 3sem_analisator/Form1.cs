@@ -62,10 +62,6 @@ namespace _3sem_analisator
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Example4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
